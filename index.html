@@ -26,6 +26,7 @@ body{
     overflow-x:hidden;
 }
 
+/* HEARTS BACKGROUND */
 .hearts{
     position:fixed;
     width:100%;
@@ -42,19 +43,26 @@ body{
 }
 
 @keyframes float{
-    0%{
-        transform:translateY(100vh);
-        opacity:0;
-    }
-    50%{
-        opacity:1;
-    }
-    100%{
-        transform:translateY(-100px);
-        opacity:0;
-    }
+    0%{transform:translateY(100vh);opacity:0;}
+    50%{opacity:1;}
+    100%{transform:translateY(-100px);opacity:0;}
 }
 
+/* CURSOR HEART TRAIL */
+.cursor-heart{
+    position:fixed;
+    pointer-events:none;
+    font-size:18px;
+    animation:fade 1s forwards;
+    z-index:9999;
+}
+
+@keyframes fade{
+    0%{opacity:1;transform:translateY(0);}
+    100%{opacity:0;transform:translateY(-30px);}
+}
+
+/* HERO */
 .hero{
     height:100vh;
     display:flex;
@@ -90,10 +98,9 @@ body{
     transition:0.3s;
 }
 
-.btn:hover{
-    transform:scale(1.05);
-}
+.btn:hover{transform:scale(1.05);}
 
+/* SECTIONS */
 section{
     padding:80px 10%;
 }
@@ -133,7 +140,6 @@ section{
     background:#2b2b2b;
     border-radius:50px;
     overflow:hidden;
-    margin-top:20px;
 }
 
 .fill{
@@ -142,6 +148,7 @@ section{
     background:linear-gradient(90deg,#ff4d88,#ff8fb8);
 }
 
+/* SECRET */
 .secret{
     display:none;
     margin-top:25px;
@@ -150,6 +157,18 @@ section{
     line-height:1.8;
 }
 
+/* CANVAS FIREWORKS */
+canvas{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:999;
+}
+
+/* FOOTER */
 footer{
     padding:100px 20px;
     text-align:center;
@@ -161,346 +180,160 @@ footer h2{
     font-family:'Dancing Script',cursive;
 }
 
-footer p{
-    max-width:700px;
-    margin:20px auto;
-    line-height:2;
-}
-
-@media(max-width:768px){
-
-    .hero h1{
-        font-size:2.8rem;
-    }
-
-    .title{
-        font-size:2.2rem;
-    }
-
-}
-
 </style>
 </head>
+
 <body>
 
 <div class="hearts"></div>
+<canvas id="fireworks"></canvas>
 
 <!-- HERO -->
-
 <section class="hero">
 
-    <h1>Happy Birthday Cutuu ❤️</h1>
+<h1>Happy Birthday Cutuu ❤️</h1>
 
-    <p>
-        Today isn't just your birthday.
-        It's the day someone incredibly beautiful, kind,
-        special and unforgettable came into this world.
-        And honestly, my world became better because you exist.
-    </p>
+<p>
+Today isn't just your birthday.
+It's the day someone incredibly special came into this world.
+</p>
 
-    <button class="btn" onclick="scrollToSection()">
-        Open Your Surprise ✨
-    </button>
+<button class="btn" onclick="startSurprise()">
+Open Your Surprise ✨
+</button>
 
 </section>
 
 <!-- LETTER -->
-
-<section id="surprise">
-
-    <h2 class="title">For My Most Special Person 🌸</h2>
-
-    <div class="card">
-
-        Dear Cutuu ❤️,
-
-        <br><br>
-
-        Happy Birthday to the most wonderful person I know.
-
-        I hope today brings you endless smiles,
-        countless beautiful moments,
-        and all the happiness your heart can hold.
-
-        You deserve love,
-        peace,
-        success,
-        laughter,
-        and every beautiful thing life has to offer.
-
-        <br><br>
-
-        Thank you for every conversation,
-        every smile,
-        every memory,
-        and every moment you've unknowingly made special.
-
-        <br><br>
-
-        Today is your day.
-
-        And I hope you feel just how loved and appreciated you truly are.
-
-    </div>
-
-</section>
-
-<!-- SPECIAL -->
-
 <section>
 
-    <h2 class="title">Why You're So Special ❤️</h2>
+<h2 class="title">For My Most Special Person 🌸</h2>
 
-    <div class="card">
-        🌸 Your smile has a way of making everything feel better.
-    </div>
-
-    <div class="card">
-        ✨ Your kindness makes people feel comfortable and happy.
-    </div>
-
-    <div class="card">
-        ❤️ Your presence turns ordinary moments into memorable ones.
-    </div>
-
-    <div class="card">
-        🌍 You hold a very special place in my heart.
-    </div>
-
-</section>
-
-<!-- MEMORIES -->
-
-<section>
-
-    <h2 class="title">Our Beautiful Journey 📖</h2>
-
-    <div class="timeline-item">
-        ❤️ The day we started talking.
-    </div>
-
-    <div class="timeline-item">
-        😊 Every random conversation that became my favorite part of the day.
-    </div>
-
-    <div class="timeline-item">
-        🌸 Every smile and every little moment we shared.
-    </div>
-
-    <div class="timeline-item">
-        🎂 Today — celebrating the amazing person you are.
-    </div>
+<div class="card">
+Dear Cutuu ❤️<br><br>
+Happy Birthday to the most special person in my life.
+You deserve happiness, love and peace always.
+</div>
 
 </section>
 
 <!-- APOLOGY -->
-
 <section>
 
-    <h2 class="title">Something From My Heart 💌</h2>
+<h2 class="title">From My Heart 💌</h2>
 
-    <div class="card apology">
+<div class="card apology">
 
-        Cutuu,
+I know I’ve been a little possessive sometimes.<br><br>
 
-        <br><br>
+I never wanted to make you uncomfortable.<br><br>
 
-        I know that lately I've been a little possessive.
+I’m really sorry if I did.<br><br>
 
-        Maybe I've annoyed you.
-        Maybe I've made things difficult sometimes.
+I’m trying to be better for you ❤️
 
-        <br><br>
-
-        If I have, I'm genuinely sorry.
-
-        <br><br>
-
-        The truth is that you mean a lot to me.
-
-        But caring about someone should never make them feel uncomfortable.
-
-        I understand that now.
-
-        <br><br>
-
-        I'm learning.
-        I'm growing.
-        And I'm trying to become a better version of myself.
-
-        <br><br>
-
-        Not because I have to.
-
-        But because you're worth it.
-
-        ❤️
-
-    </div>
-
-</section>
-
-<!-- HEARTFELT SECTION -->
-
-<section>
-
-    <h2 class="title">A Few Things I Want You To Know ❤️</h2>
-
-    <div class="card">
-        🌸 You are stronger than you think.
-    </div>
-
-    <div class="card">
-        ✨ You are more appreciated than you realize.
-    </div>
-
-    <div class="card">
-        ❤️ You bring happiness to people around you.
-    </div>
-
-    <div class="card">
-        🌹 You deserve all the love and kindness in the world.
-    </div>
-
-    <div class="card">
-        🎂 And today, I hope you feel truly special.
-    </div>
-
-</section>
-
-<!-- LOVE METER -->
-
-<section>
-
-    <h2 class="title">How Much Do I Appreciate You? ❤️</h2>
-
-    <div class="love-meter">
-        <div class="fill"></div>
-    </div>
-
-    <p style="text-align:center;margin-top:20px;">
-        100% ... and still increasing ♾️❤️
-    </p>
+</div>
 
 </section>
 
 <!-- SECRET -->
-
 <section>
 
-    <h2 class="title">Secret Message 🔐</h2>
+<h2 class="title">Secret Message 🔐</h2>
 
-    <div style="text-align:center;">
+<div style="text-align:center;">
+<button class="btn" onclick="showSecret()">Reveal</button>
 
-        <button class="btn" onclick="showSecret()">
-            Click Here ❤️
-        </button>
+<div class="secret" id="secret">
+You are truly special to me ❤️<br><br>
+— Vishal
+</div>
 
-        <div class="secret" id="secret">
-
-            Thank you for existing.
-
-            <br><br>
-
-            Thank you for being one of the most special people in my life.
-
-            <br><br>
-
-            Thank you for all the smiles,
-            the memories,
-            the conversations,
-            and the happiness.
-
-            <br><br>
-
-            No matter what happens,
-            you'll always have a special place in my heart.
-
-            <br><br>
-
-            ❤️ Vishal
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<!-- ENDING -->
-
 <footer>
-
-    <h2>Happy Birthday Cutuu ❤️</h2>
-
-    <p>
-
-        I hope this year brings you happiness,
-        success,
-        beautiful memories,
-        exciting adventures,
-        and countless reasons to smile.
-
-        <br><br>
-
-        If I've made mistakes,
-        I hope one day you'll forgive me.
-
-        <br><br>
-
-        Today is about celebrating you.
-
-        Because you truly deserve it.
-
-        <br><br>
-
-        Stay happy.
-        Stay amazing.
-        Stay exactly the wonderful person you are.
-
-        <br><br>
-
-        With lots of love,
-
-        <br><br>
-
-        ❤️ Vishal ❤️
-
-    </p>
-
+<h2>Happy Birthday ❤️</h2>
+<p>With love, Vishal</p>
 </footer>
 
 <script>
 
-function scrollToSection(){
-    document.getElementById("surprise").scrollIntoView({
-        behavior:"smooth"
-    });
+/* HEART BACKGROUND */
+setInterval(()=>{
+    let h=document.createElement("div");
+    h.className="heart";
+    h.innerHTML="❤️";
+    h.style.left=Math.random()*100+"vw";
+    h.style.fontSize=Math.random()*20+10+"px";
+    document.querySelector(".hearts").appendChild(h);
+    setTimeout(()=>h.remove(),10000);
+},400);
+
+/* CURSOR HEART TRAIL 💖 */
+document.addEventListener("mousemove",(e)=>{
+    let c=document.createElement("div");
+    c.className="cursor-heart";
+    c.innerHTML="💖";
+    c.style.left=e.clientX+"px";
+    c.style.top=e.clientY+"px";
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),1000);
+});
+
+/* FIREWORKS 🎆 */
+const canvas=document.getElementById("fireworks");
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let particles=[];
+
+function startSurprise(){
+    launchFireworks();
+    document.querySelector("#surprise")?.scrollIntoView({behavior:"smooth"});
 }
 
+function launchFireworks(){
+    for(let i=0;i<200;i++){
+        particles.push({
+            x:canvas.width/2,
+            y:canvas.height/2,
+            dx:(Math.random()-0.5)*10,
+            dy:(Math.random()-0.5)*10,
+            size:Math.random()*4,
+            life:100,
+            color:`hsl(${Math.random()*360},100%,60%)`
+        });
+    }
+}
+
+function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    particles.forEach((p,i)=>{
+        p.x+=p.dx;
+        p.y+=p.dy;
+        p.life--;
+
+        ctx.fillStyle=p.color;
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+        ctx.fill();
+
+        if(p.life<=0) particles.splice(i,1);
+    });
+
+    requestAnimationFrame(animate);
+}
+animate();
+
+/* SECRET */
 function showSecret(){
     document.getElementById("secret").style.display="block";
 }
-
-function createHeart(){
-
-    const heart=document.createElement("div");
-
-    heart.classList.add("heart");
-
-    heart.innerHTML="❤️";
-
-    heart.style.left=Math.random()*100+"vw";
-    heart.style.fontSize=(Math.random()*20+15)+"px";
-    heart.style.animationDuration=(Math.random()*5+5)+"s";
-
-    document.querySelector(".hearts").appendChild(heart);
-
-    setTimeout(()=>{
-        heart.remove();
-    },10000);
-}
-
-setInterval(createHeart,500);
 
 </script>
 
