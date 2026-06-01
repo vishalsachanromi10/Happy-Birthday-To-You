@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Cutuu ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+    overflow-x:hidden;
+}
+
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.heart{
+    position:absolute;
+    color:#ff4d88;
+    animation:float 10s linear infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    font-family:'Dancing Script',cursive;
+    color:#ff7eb6;
+}
+
+.hero p{
+    margin-top:20px;
+    max-width:700px;
+    font-size:1.2rem;
+    line-height:1.8;
+}
+
+.btn{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    background:#ff4d88;
+    color:white;
+    cursor:pointer;
+    font-size:1rem;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+section{
+    padding:80px 10%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:3rem;
+    font-family:'Dancing Script',cursive;
+    color:#ff7eb6;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:25px;
+    margin:20px 0;
+    line-height:1.8;
+}
+
+.timeline-item{
+    border-left:3px solid #ff4d88;
+    padding:20px;
+    margin-bottom:20px;
+    background:rgba(255,255,255,0.05);
+    border-radius:10px;
+}
+
+.apology{
+    border:2px solid #ff7eb6;
+}
+
+.love-meter{
+    width:100%;
+    height:30px;
+    background:#2b2b2b;
+    border-radius:50px;
+    overflow:hidden;
+    margin-top:20px;
+}
+
+.fill{
+    width:100%;
+    height:100%;
+    background:linear-gradient(90deg,#ff4d88,#ff8fb8);
+}
+
+.secret{
+    display:none;
+    margin-top:25px;
+    font-size:1.2rem;
+    color:#ffd6e7;
+    line-height:1.8;
+}
+
+footer{
+    padding:100px 20px;
+    text-align:center;
+}
+
+footer h2{
+    font-size:3rem;
+    color:#ff7eb6;
+    font-family:'Dancing Script',cursive;
+}
+
+footer p{
+    max-width:700px;
+    margin:20px auto;
+    line-height:2;
+}
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    .title{
+        font-size:2.2rem;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="hearts"></div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h1>Happy Birthday Cutuu ❤️</h1>
+
+    <p>
+        Today isn't just your birthday.
+        It's the day someone incredibly beautiful, kind,
+        special and unforgettable came into this world.
+        And honestly, my world became better because you exist.
+    </p>
+
+    <button class="btn" onclick="scrollToSection()">
+        Open Your Surprise ✨
+    </button>
+
+</section>
+
+<!-- LETTER -->
+
+<section id="surprise">
+
+    <h2 class="title">For My Most Special Person 🌸</h2>
+
+    <div class="card">
+
+        Dear Cutuu ❤️,
+
+        <br><br>
+
+        Happy Birthday to the most wonderful person I know.
+
+        I hope today brings you endless smiles,
+        countless beautiful moments,
+        and all the happiness your heart can hold.
+
+        You deserve love,
+        peace,
+        success,
+        laughter,
+        and every beautiful thing life has to offer.
+
+        <br><br>
+
+        Thank you for every conversation,
+        every smile,
+        every memory,
+        and every moment you've unknowingly made special.
+
+        <br><br>
+
+        Today is your day.
+
+        And I hope you feel just how loved and appreciated you truly are.
+
+    </div>
+
+</section>
+
+<!-- SPECIAL -->
+
+<section>
+
+    <h2 class="title">Why You're So Special ❤️</h2>
+
+    <div class="card">
+        🌸 Your smile has a way of making everything feel better.
+    </div>
+
+    <div class="card">
+        ✨ Your kindness makes people feel comfortable and happy.
+    </div>
+
+    <div class="card">
+        ❤️ Your presence turns ordinary moments into memorable ones.
+    </div>
+
+    <div class="card">
+        🌍 You hold a very special place in my heart.
+    </div>
+
+</section>
+
+<!-- MEMORIES -->
+
+<section>
+
+    <h2 class="title">Our Beautiful Journey 📖</h2>
+
+    <div class="timeline-item">
+        ❤️ The day we started talking.
+    </div>
+
+    <div class="timeline-item">
+        😊 Every random conversation that became my favorite part of the day.
+    </div>
+
+    <div class="timeline-item">
+        🌸 Every smile and every little moment we shared.
+    </div>
+
+    <div class="timeline-item">
+        🎂 Today — celebrating the amazing person you are.
+    </div>
+
+</section>
+
+<!-- APOLOGY -->
+
+<section>
+
+    <h2 class="title">Something From My Heart 💌</h2>
+
+    <div class="card apology">
+
+        Cutuu,
+
+        <br><br>
+
+        I know that lately I've been a little possessive.
+
+        Maybe I've annoyed you.
+        Maybe I've made things difficult sometimes.
+
+        <br><br>
+
+        If I have, I'm genuinely sorry.
+
+        <br><br>
+
+        The truth is that you mean a lot to me.
+
+        But caring about someone should never make them feel uncomfortable.
+
+        I understand that now.
+
+        <br><br>
+
+        I'm learning.
+        I'm growing.
+        And I'm trying to become a better version of myself.
+
+        <br><br>
+
+        Not because I have to.
+
+        But because you're worth it.
+
+        ❤️
+
+    </div>
+
+</section>
+
+<!-- HEARTFELT SECTION -->
+
+<section>
+
+    <h2 class="title">A Few Things I Want You To Know ❤️</h2>
+
+    <div class="card">
+        🌸 You are stronger than you think.
+    </div>
+
+    <div class="card">
+        ✨ You are more appreciated than you realize.
+    </div>
+
+    <div class="card">
+        ❤️ You bring happiness to people around you.
+    </div>
+
+    <div class="card">
+        🌹 You deserve all the love and kindness in the world.
+    </div>
+
+    <div class="card">
+        🎂 And today, I hope you feel truly special.
+    </div>
+
+</section>
+
+<!-- LOVE METER -->
+
+<section>
+
+    <h2 class="title">How Much Do I Appreciate You? ❤️</h2>
+
+    <div class="love-meter">
+        <div class="fill"></div>
+    </div>
+
+    <p style="text-align:center;margin-top:20px;">
+        100% ... and still increasing ♾️❤️
+    </p>
+
+</section>
+
+<!-- SECRET -->
+
+<section>
+
+    <h2 class="title">Secret Message 🔐</h2>
+
+    <div style="text-align:center;">
+
+        <button class="btn" onclick="showSecret()">
+            Click Here ❤️
+        </button>
+
+        <div class="secret" id="secret">
+
+            Thank you for existing.
+
+            <br><br>
+
+            Thank you for being one of the most special people in my life.
+
+            <br><br>
+
+            Thank you for all the smiles,
+            the memories,
+            the conversations,
+            and the happiness.
+
+            <br><br>
+
+            No matter what happens,
+            you'll always have a special place in my heart.
+
+            <br><br>
+
+            ❤️ Vishal
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ENDING -->
+
+<footer>
+
+    <h2>Happy Birthday Cutuu ❤️</h2>
+
+    <p>
+
+        I hope this year brings you happiness,
+        success,
+        beautiful memories,
+        exciting adventures,
+        and countless reasons to smile.
+
+        <br><br>
+
+        If I've made mistakes,
+        I hope one day you'll forgive me.
+
+        <br><br>
+
+        Today is about celebrating you.
+
+        Because you truly deserve it.
+
+        <br><br>
+
+        Stay happy.
+        Stay amazing.
+        Stay exactly the wonderful person you are.
+
+        <br><br>
+
+        With lots of love,
+
+        <br><br>
+
+        ❤️ Vishal ❤️
+
+    </p>
+
+</footer>
+
+<script>
+
+function scrollToSection(){
+    document.getElementById("surprise").scrollIntoView({
+        behavior:"smooth"
+    });
+}
+
+function showSecret(){
+    document.getElementById("secret").style.display="block";
+}
+
+function createHeart(){
+
+    const heart=document.createElement("div");
+
+    heart.classList.add("heart");
+
+    heart.innerHTML="❤️";
+
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(Math.random()*20+15)+"px";
+    heart.style.animationDuration=(Math.random()*5+5)+"s";
+
+    document.querySelector(".hearts").appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },10000);
+}
+
+setInterval(createHeart,500);
+
+</script>
+
+</body>
+</html>
